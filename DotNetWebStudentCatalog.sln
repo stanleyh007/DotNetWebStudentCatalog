@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWebStudentCatalog", "DotNetWebStudentCatalog\DotNetWebStudentCatalog.csproj", "{9E39990B-9956-4CE1-885F-DF983D47EFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWebStudentCatalog.Tests", "DotNetWebStudentCatalog.Tests\DotNetWebStudentCatalog.Tests.csproj", "{A7C3F799-5A8D-4432-A1CE-F1C53B3040E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E39990B-9956-4CE1-885F-DF983D47EFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E39990B-9956-4CE1-885F-DF983D47EFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E39990B-9956-4CE1-885F-DF983D47EFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E39990B-9956-4CE1-885F-DF983D47EFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C3F799-5A8D-4432-A1CE-F1C53B3040E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C3F799-5A8D-4432-A1CE-F1C53B3040E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C3F799-5A8D-4432-A1CE-F1C53B3040E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C3F799-5A8D-4432-A1CE-F1C53B3040E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
