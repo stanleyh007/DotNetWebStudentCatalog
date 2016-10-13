@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using DotNetWebStudentCatalog.Models.Entity;
 
 namespace DotNetWebStudentCatalog.Models
 {
@@ -18,8 +19,11 @@ namespace DotNetWebStudentCatalog.Models
         }
     }
 
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<StudentModel> Students { get; set; } 
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -29,5 +33,9 @@ namespace DotNetWebStudentCatalog.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<DotNetWebStudentCatalog.Models.Entity.CompetencyHeaderModel> CompetencyHeaderModels { get; set; }
+
+        public System.Data.Entity.DbSet<DotNetWebStudentCatalog.Models.Entity.CompetencyModel> CompetencyModels { get; set; }
     }
 }

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "App_Start/Site.css",
+    "inputFile": "App_Start/Site.less"
+  },
+  {
+    "outputFile": "Content/Less/Site.css",
+    "inputFile": "Content/Less/Site.less"
+  },
+  {
+    "outputFile": "Content/Site.css",
+    "inputFile": "Content/Site.less"
+  }
+]

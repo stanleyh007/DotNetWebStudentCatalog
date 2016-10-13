@@ -1,0 +1,29 @@
+﻿@model DotNetWebStudentCatalog.Models.Entity.StudentModel
+
+
+<div class="input-group">
+    <label>Firstname</label>
+    @Html.TextBoxFor(a => a.FirstName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.FirstName)
+</div>
+
+<div class="input-group">
+    <label>Lastname</label>
+    @Html.TextBoxFor(a => a.LastName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.LastName)
+</div>
+
+<div class="input-group">
+    @Html.LabelFor(a => a.Phone)
+    @Html.TextBoxFor(a => a.Phone, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Phone)
+</div>
+
+<div class="input-group">
+    <label>Email</label>
+    @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Email)
+    @*<input type="text" id="Email" name="Email" />*@
+</div>
+
+<input type="submit" value="Save" class="btn btn-primary" id="createSave" />
