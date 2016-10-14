@@ -33,8 +33,10 @@ namespace DotNetWebStudentCatalog.Migrations
             {
                new StudentModel
                 { FirstName = "Taeyeon", LastName = "Kim", Email = "taeyeonkim@sm.kr", Phone = "42355678"},
+               new StudentModel
+               { FirstName = "YoonA", LastName = "Lim", Email = "Yonnalim@sm.kr", Phone = "12589658"},
             }
-                    
+               
 
                 );
         }
