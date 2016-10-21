@@ -4,11 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Students</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if (ViewContext.HttpContext.User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
@@ -39,11 +43,14 @@
          <td>
              @Html.DisplayFor(modelItem => item.Phone)
          </td>
-         <td>
-             @Html.ActionLink("Edit", "Edit", new { id=item.StudentModelId}) |
-             @Html.ActionLink("Details", "Details", new { id=item.StudentModelId}) |
-             @Html.ActionLink("Delete", "Delete", new { id=item.StudentModelId})
-         </td>
+         @if (ViewContext.HttpContext.User.IsInRole("admin"))
+         {
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.StudentModelId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.StudentModelId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StudentModelId })
+            </td>
+         } 
      </tr>
     }
 </table>

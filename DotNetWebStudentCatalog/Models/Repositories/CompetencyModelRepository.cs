@@ -10,7 +10,6 @@ namespace DotNetWebStudentCatalog.Models.Repositories
 {
     public class CompetencyModelRepository : ICompetencyModelRepository
     {
-     
         public ApplicationDbContext db = new ApplicationDbContext();
 
         public bool Delete(int? id)

@@ -9,23 +9,17 @@ using DotNetWebStudentCatalog.Models.Repositories;
 
 namespace DotNetWebStudentCatalog.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class StudentsController : Controller
     {
-        /*
-        public string Index()
-        {
-            return "Hi there! SNSD!";
-        }
-        */
-
         private StudentRepository studentRepos = new StudentRepository();
-
         public StudentModel Find(int? id)
         {
             StudentModel student = studentRepos.Find(id);
             return student;
         }
 
+        [AllowAnonymous]
         public ActionResult Index()
         {
             //StudentModel student = db.Students.FirstOrDefault(a => a.LastName == "42");
@@ -39,14 +33,12 @@ namespace DotNetWebStudentCatalog.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin, User")]
         public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public ActionResult Create(StudentModel student)
         {
             if(ModelState.IsValid)

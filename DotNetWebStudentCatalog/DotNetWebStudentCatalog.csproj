@@ -213,9 +213,14 @@
     <Compile Include="Controllers\CompetencyModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610201925135_Initial.cs" />
+    <Compile Include="Migrations\201610201925135_Initial.Designer.cs">
+      <DependentUpon>201610201925135_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abstract\ICompetencyHeaderModelRepository.cs" />
@@ -228,6 +233,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Repositories\CompetencyModelRepository.cs" />
     <Compile Include="Models\Repositories\CompetencyHeaderModelRepository.cs" />
+    <Compile Include="Models\Repositories\DbContextRepository.cs" />
     <Compile Include="Models\Repositories\StudentRepository.cs" />
     <Compile Include="Models\Abstract\IStudentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -321,6 +327,9 @@
     <Content Include="Views\CompetencyModels\Details.cshtml" />
     <Content Include="Views\CompetencyModels\Edit.cshtml" />
     <Content Include="Views\CompetencyModels\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Shared\AuthorizeFailed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -333,6 +342,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610201925135_Initial.resx">
+      <DependentUpon>201610201925135_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

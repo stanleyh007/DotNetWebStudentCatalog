@@ -12,6 +12,7 @@ using DotNetWebStudentCatalog.Models.Repositories;
 
 namespace DotNetWebStudentCatalog.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class CompetencyModelsController : Controller
     {
         private CompetencyModelRepository competencyModelRepos = new CompetencyModelRepository();
@@ -23,6 +24,7 @@ namespace DotNetWebStudentCatalog.Controllers
         }
 
         // GET: CompetencyModels
+        [AllowAnonymous]
         public ActionResult Index()
         {        
             return View(competencyModelRepos.GetAll());
@@ -47,6 +49,7 @@ namespace DotNetWebStudentCatalog.Controllers
         }
 
         // GET: CompetencyModels/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             ViewBag.CompetencyHeaderModelId = new SelectList(competencyModelRepos.db.CompetencyHeaderModels, "CompetencyHeaderModelId", "name");
@@ -58,6 +61,7 @@ namespace DotNetWebStudentCatalog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Create([Bind(Include = "CompetencyModelId,name,CompetencyHeaderModelId")] CompetencyModel competencyModel)
         {
             if (ModelState.IsValid)

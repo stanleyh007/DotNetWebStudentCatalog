@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DotNetWebStudentCatalog.Models;
+using DotNetWebStudentCatalog.Models.Repositories;
 
 namespace DotNetWebStudentCatalog.Controllers
 {
@@ -18,8 +19,11 @@ namespace DotNetWebStudentCatalog.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        private DbContextRepository dbContextRepos = new DbContextRepository();
+
         public AccountController()
-        {
+        {  
+
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -139,6 +143,7 @@ namespace DotNetWebStudentCatalog.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Name = new SelectList(dbContextRepos.db.Roles.ToList(), "Name", "Name");
             return View();
         }
 
@@ -155,6 +160,8 @@ namespace DotNetWebStudentCatalog.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await this.UserManager.AddToRoleAsync(user.Id, model.Name);
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
