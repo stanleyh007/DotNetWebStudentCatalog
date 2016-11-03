@@ -81,6 +81,8 @@ namespace DotNetWebStudentCatalog.Models
         public string ConfirmPassword { get; set; }
 
         public string Name { get; set; }
+
+        public Entity.StudentModel StudentModel { get; set; }
     }
 
     public class ResetPasswordViewModel

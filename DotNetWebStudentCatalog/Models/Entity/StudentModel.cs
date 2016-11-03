@@ -19,9 +19,9 @@ namespace DotNetWebStudentCatalog.Models.Entity
         //[RegularExpression(@"^[0-9]",ErrorMessage ="Number is not allowed")]
         public string LastName { set; get; }
 
-        [Required(ErrorMessage = "YEAH! YOU DEAD xD!")]
+        /*[Required(ErrorMessage = "YEAH! YOU DEAD xD!")]
         [EmailAddress(ErrorMessage = "Type a correct E-mail address!")]
-        public string Email { set; get; }
+        public string Email { set; get; }*/
 
         [Required]
         [Phone(ErrorMessage = "Do you really think this is a phonenumber?")]

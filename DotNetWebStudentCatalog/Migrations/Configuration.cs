@@ -32,28 +32,28 @@ namespace DotNetWebStudentCatalog.Migrations
             //    );
             //
 
-            context.Students.AddOrUpdate(s => s.Email, new StudentModel[]
+            context.Students.AddOrUpdate(s => s.StudentModelId, new StudentModel[]
             {
                new StudentModel
-               { FirstName = "Taeyeon", LastName = "Kim", Email = "taeyeonkim@sm.kr", Phone = "42355678"},
+               { FirstName = "Taeyeon", LastName = "Kim", StudentModelId = 1, Phone = "42355678"},
                new StudentModel
-               { FirstName = "YoonA", LastName = "Lim", Email = "Yonnalim@sm.kr", Phone = "12589658"},
+               { FirstName = "YoonA", LastName = "Lim", StudentModelId = 2, Phone = "12589658"},
                new StudentModel
-               { FirstName = "Jessica", LastName = "Jung", Email = "jessicajung@sm.kr", Phone = "45859632"},
+               { FirstName = "Jessica", LastName = "Jung", StudentModelId = 3, Phone = "45859632"},
                new StudentModel
-               { FirstName = "Juhyun", LastName = "Seo", Email = "seohyun@sm.kr", Phone = "89741354"},
+               { FirstName = "Juhyun", LastName = "Seo", StudentModelId = 4, Phone = "89741354"},
                new StudentModel
-               { FirstName = "Sooyoung", LastName = "Choi", Email = "sooyoungchoi@sm.kr", Phone = "48496632"},
+               { FirstName = "Sooyoung", LastName = "Choi", StudentModelId = 5, Phone = "48496632"},
                new StudentModel
-               { FirstName = "Hyoyeon", LastName = "Kim", Email = "hyoyeonkim@sm.kr", Phone = "58949632"},
+               { FirstName = "Hyoyeon", LastName = "Kim", StudentModelId = 6, Phone = "58949632"},
                new StudentModel
-               { FirstName = "Sunny", LastName = "Lee", Email = "sunnylee@sm.kr", Phone = "18596454"},
+               { FirstName = "Sunny", LastName = "Lee", StudentModelId = 7, Phone = "18596454"},
                new StudentModel
-               { FirstName = "Yuri", LastName = "Kwon", Email = "yurikwon@sm.kr", Phone = "56984582"},
+               { FirstName = "Yuri", LastName = "Kwon", StudentModelId = 8, Phone = "56984582"},
                new StudentModel
-               { FirstName = "Tiffany", LastName = "Hwang", Email = "tiffanyhwang@sm.kr", Phone = "48966553"},
+               { FirstName = "Tiffany", LastName = "Hwang", StudentModelId = 9, Phone = "48966553"},
                new StudentModel
-               { FirstName = "Krystal", LastName = "Jung", Email = "krystaljung@sm.kr", Phone = "59568817"}
+               { FirstName = "Krystal", LastName = "Jung", StudentModelId = 10, Phone = "59568817"}
             });
 
             context.CompetencyHeaderModels.AddOrUpdate(h => h.CompetencyHeaderModelId, new CompetencyHeaderModel[]

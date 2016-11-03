@@ -17,6 +17,8 @@ namespace DotNetWebStudentCatalog.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public StudentModel StudentModel {get; set;}
     }
 
 
